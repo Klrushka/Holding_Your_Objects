@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sequence {
-    private List items = new ArrayList();
+    private List<Object> items = new ArrayList();
     private int next = 0;
 
 
