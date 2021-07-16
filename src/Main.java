@@ -1,3 +1,6 @@
+import task11.ClassWithIterator;
+import task14.InsertInLinkedList;
+import task16.UniqueWords;
 import task3.Selector;
 import task3.Sequence;
 import task5.ListFeatures;
@@ -60,11 +63,55 @@ public class Main {
             System.out.println(it.next() + " ");
         }
 
-        /*
+        System.out.println();
 
+        /*
+        Exercise 11: (2) Write a method that uses an Iterator to step through a Collection and
+        print the toString( ) of each object in the container. Fill all the different types of
+        Collections with objects and apply your method to each container.
+         */
+
+        Collection<Integer> integerCollection = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        Collection <Character> characterCollection = new HashSet<>(Arrays.asList('a','a','v','d','o'));
+
+        ClassWithIterator.print(integerCollection);
+
+        System.out.println();
+
+        ClassWithIterator.print(characterCollection);
+
+        System.out.println();
+
+        /*
+        Exercise 14: (3) Create an empty LinkedList<Integer>. Using a Listlterator, add
+        Integers to the List by always inserting them in the middle of the List.
+         */
+
+        InsertInLinkedList insertInLinkedList = new InsertInLinkedList();
+
+        insertInLinkedList.start(20);
+
+        insertInLinkedList.print();
+
+        System.out.println();
+
+        /*
+        Exercise 16: (5) Create a Set of the vowels. Working from UniqueWords.Java, count
+        and display the number of vowels in each input word, and also display the total number of
+        vowels in the input file
          */
 
 
+        UniqueWords uniqueWords = new UniqueWords();
+
+        uniqueWords.countVowels(uniqueWords.readFile());
+
+
+        System.out.println();
+
+        /*
+
+         */
 
 
 
