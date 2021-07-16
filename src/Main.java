@@ -1,6 +1,8 @@
 import task11.ClassWithIterator;
 import task14.InsertInLinkedList;
 import task16.UniqueWords;
+import task18.ClassWithHashMap;
+import task21.SortMap;
 import task3.Selector;
 import task3.Sequence;
 import task5.ListFeatures;
@@ -110,8 +112,29 @@ public class Main {
         System.out.println();
 
         /*
-
+        Exercise 18: (3) Fill a HashMap with key-value pairs. Print the results to show
+        ordering by hash code. Extract the pairs, sort by key, and place the result into a
+        LinkedHashMap. Show that the insertion order is maintained.
          */
+
+        ClassWithHashMap classWithHashMap = new ClassWithHashMap();
+
+        classWithHashMap.init();
+
+        System.out.println(classWithHashMap.sort());
+
+
+        /*
+        Exercise 21: (3) Using a Map<String,Integer>, follow the form of
+        UniqueWords.java to create a program that counts the occurrence of words in a file. Sort
+        the results using Collections.sort( ) with a second argument of
+        String.CASE_INSENSITIVE_ORDER (to produce an alphabetic sort), and display the
+        result.
+         */
+
+        SortMap sortMap = new SortMap();
+
+        sortMap.start();
 
 
 
