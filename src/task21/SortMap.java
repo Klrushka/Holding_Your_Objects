@@ -33,5 +33,6 @@ public class SortMap {
         }
 
         System.out.println(wordsMap);
+        System.out.println(words.size() + " words");
     }
 }

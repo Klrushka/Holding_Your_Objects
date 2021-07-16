@@ -123,6 +123,7 @@ public class Main {
 
         System.out.println(classWithHashMap.sort());
 
+        System.out.println();
 
         /*
         Exercise 21: (3) Using a Map<String,Integer>, follow the form of
