@@ -17,6 +17,14 @@ public class InsertInLinkedList {
     }
 
 
+    public void start(int size, int value){
+        ListIterator<Integer> iterator = numbers.listIterator();
+        for (int i = 0; i < size; i++)
+            numbers.add(iterator.previousIndex() / 2, value);
+    }
+
+
+
     public void print() {
         System.out.println(numbers.toString());
     }

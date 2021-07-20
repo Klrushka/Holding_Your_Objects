@@ -9,6 +9,9 @@ import task5.ListFeatures;
 import task7.ClassWithArray;
 
 import java.util.*;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -73,8 +76,8 @@ public class Main {
         Collections with objects and apply your method to each container.
          */
 
-        Collection<Integer> integerCollection = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-        Collection <Character> characterCollection = new HashSet<>(Arrays.asList('a','a','v','d','o'));
+        Collection<Integer> integerCollection = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Collection<Character> characterCollection = new HashSet<>(Arrays.asList('a', 'a', 'v', 'd', 'o'));
 
         ClassWithIterator.print(integerCollection);
 
@@ -85,7 +88,7 @@ public class Main {
         System.out.println();
 
         /*
-        Exercise 14: (3) Create an empty LinkedList<Integer>. Using a Listlterator, add
+        Exercise 14: (3) Create an empty LinkedList<Integer>. Using a ListIterator, add
         Integers to the List by always inserting them in the middle of the List.
          */
 
@@ -105,6 +108,7 @@ public class Main {
 
 
         UniqueWords uniqueWords = new UniqueWords();
+
 
         uniqueWords.countVowels(uniqueWords.readFile());
 
@@ -136,6 +140,19 @@ public class Main {
         SortMap sortMap = new SortMap();
 
         sortMap.start();
+
+
+
+        // test
+        System.out.println("*****************************************************************************************");
+
+        Pattern pattern = Pattern.compile(".*[aeiouAEIOU]*.");
+        MatchResult matcher = pattern.matcher("Hi my names is Kirill");
+
+
+        System.out.println(matcher.groupCount());
+
+
 
 
 
