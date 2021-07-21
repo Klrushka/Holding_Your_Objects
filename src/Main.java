@@ -124,8 +124,11 @@ public class Main {
         ClassWithHashMap classWithHashMap = new ClassWithHashMap();
 
         classWithHashMap.init();
+        System.out.println("Map: " + classWithHashMap.getMap());
 
-        System.out.println(classWithHashMap.sort());
+        System.out.println("tSet: " + classWithHashMap.gettSet());
+
+        System.out.println("Linked Hash Map: " + classWithHashMap.sort());
 
         System.out.println();
 
@@ -144,7 +147,7 @@ public class Main {
 
         // test
         System.out.println("************************************** test *************************************************");
-        
+
 
     }
 }

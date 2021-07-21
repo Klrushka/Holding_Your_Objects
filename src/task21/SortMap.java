@@ -9,7 +9,7 @@ public class SortMap {
     private List<String> words = new ArrayList<>();
     private Map<String,Integer> wordsMap = new HashMap<>();
     private UniqueWords uniqueWords = new UniqueWords();
-    private Set<Character> vowels = new HashSet<>();
+    String regex = "[^aeiouyAEIOUY]";
 
     public void start(){
         words.addAll(Arrays.asList(uniqueWords.readFile()));
@@ -19,20 +19,16 @@ public class SortMap {
 
         int allVowels = 0;
         int vowelsInWord = 0;
-        Collections.addAll(vowels, 'A', 'E', 'I', 'O', 'U', 'Y');
 
         for (int i = 0; i < words.size(); i++) {
-            for (int j = 0; j < words.get(i).length(); j++) {
-                if (vowels.contains(words.get(i).toUpperCase(Locale.ROOT).charAt(j))){
-                    allVowels++;
-                    vowelsInWord++;
-                }
-            }
+            vowelsInWord = words.get(i).replaceAll(regex,"").length();
+            allVowels += vowelsInWord;
+
             wordsMap.put(words.get(i),vowelsInWord);
             vowelsInWord = 0;
         }
 
         System.out.println(wordsMap);
-        System.out.println(words.size() + " words");
+        System.out.println(wordsMap.size() + " words");
     }
 }

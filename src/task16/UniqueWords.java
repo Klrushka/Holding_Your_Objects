@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UniqueWords {
-    Set<String> words = new LinkedHashSet<>();
+    List<String> words = new ArrayList<>();
     Set<Character> vowels = new HashSet<>();
     private String path;
 

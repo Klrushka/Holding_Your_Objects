@@ -4,32 +4,53 @@ import java.util.*;
 
 public class ClassWithHashMap {
 
-    private Map<Integer, Integer> map = new HashMap<>();
+    private Map<String, Integer> map = new HashMap<>();
 
-    private Map<Integer, Integer> lMap = new LinkedHashMap<>();
+    private Map<String, Integer> lMap = new LinkedHashMap<>();
 
-    private Set<Integer> tSet;
+    private Set<String> tSet;
+
+
 
 
     public void init() {
         Random random = new Random();
 
-        for (int i = 0; i < 10; i++){
-            map.put(i,random.nextInt(20));
-        }
+        map.put("zero",0);
+        map.put("one",1);
+        map.put("two",2);
+        map.put("three",3);
+        map.put("four",4);
+        map.put("five",5);
+        map.put("six",6);
+        map.put("seven",7);
+        map.put("eight",8);
+        map.put("nine",9);
 
         tSet = new TreeSet<>(map.keySet());
     }
 
 
 
-    public Map<Integer, Integer> sort (){
 
-        for (Integer i : tSet){
+    public Map<String, Integer> sort (){
+
+        for (String i : tSet){
             lMap.put(i,map.get(i));
         }
 
         return lMap;
     }
 
+    public Map<String, Integer> getMap() {
+        return map;
+    }
+
+    public Map<String, Integer> getlMap() {
+        return lMap;
+    }
+
+    public Set<String> gettSet() {
+        return tSet;
+    }
 }
