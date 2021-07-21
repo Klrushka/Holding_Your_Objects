@@ -66,6 +66,7 @@ public class UniqueWords {
             allVowels += vowelsInWord;
 
             System.out.println("vowels in " + i + " word: " + vowelsInWord);
+
             vowelsInWord = 0;
         }
         System.out.println("All vowels: " + allVowels);
