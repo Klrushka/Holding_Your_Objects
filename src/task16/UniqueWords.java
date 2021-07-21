@@ -59,15 +59,10 @@ public class UniqueWords {
     public void countVowels(String[] str) {
         int allVowels = 0;
         int vowelsInWord = 0;
-        String regex = ".*[aeiouAEIOU]*.";
-        Pattern pattern = Pattern.compile(regex);
-
-        Collections.addAll(vowels, 'A', 'E', 'I', 'O', 'U', 'Y');
+        String regex = "[^aeiouyAEIOUY]";
 
         for (int i = 0; i < str.length; i++) {
-            // todo fix
-            MatchResult matcher = pattern.matcher(str[i]);
-            vowelsInWord = matcher.groupCount();
+            vowelsInWord = str[i].replaceAll(regex,"").length();
             allVowels += vowelsInWord;
 
             System.out.println("vowels in " + i + " word: " + vowelsInWord);

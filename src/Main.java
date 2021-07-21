@@ -142,20 +142,9 @@ public class Main {
         sortMap.start();
 
 
-
         // test
-        System.out.println("*****************************************************************************************");
-
-        Pattern pattern = Pattern.compile(".*[aeiouAEIOU]*.");
-        MatchResult matcher = pattern.matcher("Hi my names is Kirill");
-
-
-        System.out.println(matcher.groupCount());
-
-
-
-
-
+        System.out.println("************************************** test *************************************************");
+        
 
     }
 }
